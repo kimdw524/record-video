@@ -2,15 +2,20 @@ import styled from 'styled-components';
 
 const Button1 = (props) => {
     return (
-        <Button {...props} />
+        props.icon ?
+        <Button {...props}><Icon>{props.icon}</Icon>{props.children}</Button>
+        : <Button {...props} />
     )
 }
 
 export default Button1;
 
 const Button = styled.button`
+    display: flex;
+    align-items: center;
     position: relative;
-    padding: 1.25rem 1.5rem;
+    height: 4rem;
+    padding: 0 1.5rem;
     background-color: transparent;
     box-shadow: #2e83ff 0 0 0 1px inset;
     border: 0;
@@ -39,3 +44,8 @@ const Button = styled.button`
         }
     }
 `;
+
+const Icon = styled.div`
+    display: inline-block;
+    margin-right: 0.5rem;
+`
