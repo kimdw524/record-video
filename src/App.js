@@ -1,8 +1,13 @@
+import GlobalStyle from './styles/GlobalStyle';
 import Main from './pages/Main';
+import Record from './pages/Record';
 
 const App = () => {
   return (
-    <Main />
+    <>
+      <GlobalStyle />
+      <Record />
+    </>
   )
 }
 
