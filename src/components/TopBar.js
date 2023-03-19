@@ -46,6 +46,7 @@ const Item = styled.div`
     background-color: var(--topbar-item-bg-color);
     cursor: pointer;
     transition: all 200ms ease;
+    z-index: 1;
     :after {
         display: flex;
         align-items: center;
@@ -61,7 +62,6 @@ const Item = styled.div`
         transition: all 200ms ease;
         transform: scaleY(0);
         transform-origin: 50% 0;
-        z-index: 1;
         content: attr(data-text);
     }
     
