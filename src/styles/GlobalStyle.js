@@ -11,11 +11,29 @@ const GlobalStyle = createGlobalStyle`
         outline: none;
         -webkit-tap-highlight-color: transparent;
     }
+
+    html {
+        font-size: 14px;
+    }
     
+    body.light {
+        --main-bg-color: #fff;
+        --main-text-color: #000;
+        --button-text-color: #000;
+        --topbar-bg-color: #fff;
+    }
+
+    body.dark {
+        --main-bg-color: #222830;
+        --main-text-color: #fff;
+        --button-text-color: #fff;
+        --topbar-bg-color: #1e1e1e;
+    }
+
     body {
         margin: 0;
-        background: #0d1117;
-        color: #fff;
+        background: var(--main-bg-color);
+        color: var(--main-text-color);
     }
 `;
 
