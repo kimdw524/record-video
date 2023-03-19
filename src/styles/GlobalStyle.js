@@ -21,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
         --main-text-color: #000;
         --button-text-color: #000;
         --topbar-bg-color: #fff;
+        --topbar-border-color: #00000033;
+        --topbar-item-bg-color: #f3f3f3;
     }
 
     body.dark {
@@ -28,6 +30,8 @@ const GlobalStyle = createGlobalStyle`
         --main-text-color: #fff;
         --button-text-color: #fff;
         --topbar-bg-color: #1e1e1e;
+        --topbar-border-color: #000000cc;
+        --topbar-item-bg-color: #141414;
     }
 
     body {
