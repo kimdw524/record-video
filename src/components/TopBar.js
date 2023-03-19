@@ -70,4 +70,8 @@ const Item = styled.div`
             transform: scaleY(1);
         }
     }
+
+    :active {
+        transform: scale(1.05);
+    }
 `
