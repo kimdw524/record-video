@@ -61,6 +61,7 @@ const Item = styled.div`
         transition: all 200ms ease;
         transform: scaleY(0);
         transform-origin: 50% 0;
+        z-index: 1;
         content: attr(data-text);
     }
     
