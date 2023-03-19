@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 14px;
     }
     
-    body.light {
+    body {
         --main-bg-color: #fff;
         --main-text-color: #000;
         --button-text-color: #000;
@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         background: var(--main-bg-color);
         color: var(--main-text-color);
+        transition: all 200ms ease;
     }
 `;
 
