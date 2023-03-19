@@ -19,7 +19,7 @@ const Button = styled.button`
     background-color: transparent;
     box-shadow: #2e83ff 0 0 0 1px inset;
     border: 0;
-    color: #fff;
+    color: var(--button-text-color);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
