@@ -44,10 +44,22 @@ const Item = styled.div`
     height: 100%;
     padding: 0 1.5rem;
     background-color: var(--topbar-item-bg-color);
+    color: var(--main-text-color);
     cursor: pointer;
     transition: all 200ms ease;
     z-index: 1;
-    :after {
+    
+    ::before {
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transition: all 200ms ease;
+        content: '';
+    }
+
+    ::after {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -66,10 +78,15 @@ const Item = styled.div`
     }
     
     :hover {
-        :after {
+        ::before {
+            bottom: -2.5rem;
+            opacity: 1;
+        }
+        ::after {
             opacity: 1;
             transform: scaleY(1);
         }
+        z-index: 2;
     }
 
     :active {
