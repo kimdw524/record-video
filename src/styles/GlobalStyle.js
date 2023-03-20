@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
         --button-text-color: #000;
         --topbar-bg-color: #fff;
         --topbar-border-color: #00000033;
-        --topbar-item-bg-color: #f3f3f3;
+        --topbar-item-bg-color: #fff;
     }
 
     body.dark {
