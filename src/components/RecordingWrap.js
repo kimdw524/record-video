@@ -1,9 +1,12 @@
+/*
+    실시간 녹화중인 Video의 Wrap
+*/
 import styled from 'styled-components';
 
 const RecordingWrap = (props) => {
     return (
         <Wrap>
-            <Text>현재 녹화 중인 영상이 재생되는 곳입니다.</Text>{props.children}
+            <Text>{props.message}</Text>{props.children}
         </Wrap>
     )
 }

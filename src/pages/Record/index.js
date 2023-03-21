@@ -20,7 +20,7 @@ const Record = () => {
             </TopBar.Bar>
 
             <Body>
-                <RecordingWrap>{recordVideo.video}</RecordingWrap>
+                <RecordingWrap message="현재 녹화 중인 영상이 재생되는 곳입니다.">{recordVideo.video}</RecordingWrap>
             </Body>
         </>
     )
