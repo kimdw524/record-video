@@ -23,6 +23,12 @@ const GlobalStyle = createGlobalStyle`
         --topbar-bg-color: #fff;
         --topbar-border-color: #00000033;
         --topbar-item-bg-color: #fff;
+        --select-bg-color: #fff;
+        --select-shadow-inset: #e9e9e9;
+        --select-shadow-hover: #668ddd33;
+        --select-border-color: #747474;
+        --select-option-border-color: #efefef;
+        --select-option-bg-color-hover: #e7f0ff;
     }
 
     body.dark {
@@ -32,6 +38,12 @@ const GlobalStyle = createGlobalStyle`
         --topbar-bg-color: #1e1e1e;
         --topbar-border-color: #000000cc;
         --topbar-item-bg-color: #141414;
+        --select-bg-color: #161616;
+        --select-shadow-inset: #343434;
+        --select-shadow-hover: #d2d2d21a;
+        --select-border-color: #101010;
+        --select-option-border-color: #1e1e1e;
+        --select-option-bg-color-hover: #2a2a2a;
     }
 
     body {
