@@ -16,7 +16,7 @@ const useRecordVideo = () => {
     }, [])
 
     const stop = () => {
-        if(mediaRecorder.current !== null)
+        if(mediaRecorder.current?.state === 'recording')
             mediaRecorder.current.stop();
     }
 
@@ -47,7 +47,6 @@ const useRecordVideo = () => {
             }
 
             mediaRecorder.current.onstop = () => {
-                console.log(mediaData.current);
                 const blob = new Blob(mediaData.current, {type: 'video/webm'});
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);
@@ -55,6 +54,7 @@ const useRecordVideo = () => {
                 document.body.appendChild(link);
                 link.click();
                 link.parentNode.removeChild(link);
+                mediaData.currnet = [];
             }
             mediaRecorder.current.start();
             console.log(mediaRecorder.current);
