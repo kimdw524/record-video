@@ -1,9 +1,22 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const Select = (props) => {
     const [selected, setSelected] = useState(0);
     const [show, setShow] = useState(false);
+
+    const Click = (index) => {
+        if(props.value)
+            props.value.current = props.option[index][1];
+        setSelected(index);
+        setShow(false);
+    }
+
+    useEffect(() => {
+        if(props.value)
+            props.value.current = props.option[0][1];
+    }, [props.value, props.option])
+
     return (
         <SelectBox style={{width: props.width}} show={show}>
             <div onClick={() => setShow(!show)}>{props.option.length > 0 ? props.option[selected][0] : ''}</div>
@@ -11,7 +24,7 @@ const Select = (props) => {
                 {
                     props.option.map((i, index) => {
                         return (
-                            <li key={i[1]} onClick={() => {setSelected(index); setShow(false)}}>{i[0]}</li>
+                            <li key={i[1]} onClick={() => Click(index)}>{i[0]}</li>
                         );
                     })
                 }
