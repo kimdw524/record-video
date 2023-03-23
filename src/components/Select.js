@@ -84,6 +84,7 @@ const SelectBox = styled.div`
         border: 1px solid var(--select-border-color);
         list-style: none;
         transform-origin: 50% 0;
+        z-index: 99;
         animation: ${slide_animation} 150ms ease 1;
         li {
             width: 100%;
