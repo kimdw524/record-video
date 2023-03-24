@@ -1,11 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
+import Pretendard from 'assets/fonts/PretendardVariable.woff2'
 
-const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+const GlobalStyle = createGlobalStyle`    
+    @font-face {
+        font-family: 'Pretendard';
+        src: local('Pretendard'), url(${Pretendard}) format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
     
     *, *::before, *::after {
         box-sizing: border-box;
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Pretendard', sans-serif;
         font-weight: bold;
         user-select: none;
         outline: none;
